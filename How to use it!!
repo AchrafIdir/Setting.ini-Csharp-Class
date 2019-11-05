@@ -1,0 +1,23 @@
+
+Open the INI file:
+var MyIni = new IniFile(@"C:\Settings.ini");
+
+
+
+
+You can write some values like so:
+MyIni.Write("V1", "100");
+MyIni.Write("Page", "achrafteam");
+To create a file like this:
+[MyProg]
+V1=100
+Page=achrafteam
+
+
+To read the values out of the INI file:
+var DefaultVolume = IniFile.Read("V1");
+var HomePage = IniFile.Read("Page");
+
+
+You can also delete a whole section (including all keys) like so:
+MyIni.DeleteSection("Section Name");
